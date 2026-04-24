@@ -15,15 +15,8 @@
       padding: 20px;
       margin: 0;
     }
-    h1 {
-      color: #00d4ff;
-      font-size: 28px;
-      margin-top: 40px;
-    }
-    p {
-      color: #aaa;
-      font-size: 16px;
-    }
+    h1 { color: #00d4ff; font-size: 28px; margin-top: 40px; }
+    p { color: #aaa; font-size: 16px; }
     .btn {
       background: #00d4ff;
       color: #000;
@@ -35,29 +28,24 @@
       cursor: pointer;
       width: 80%;
     }
-    .btn:hover {
-      background: #00aacc;
-    }
   </style>
 </head>
 <body>
   <h1>🎉 Welcome to Gozzybot!</h1>
   <p>Earn rewards by completing tasks!</p>
   <br>
-  <button class="btn">🎁 Claim Reward</button>
+  <button class="btn" onclick="showAd()">🎁 Claim Reward</button>
   <br>
   <button class="btn">🎮 Play & Earn</button>
   <br>
   <button class="btn">💰 My Balance</button>
+
+  <script>
+    function showAd() {
+      show_10919253().then(() => {
+        alert('You have seen an ad!');
+      });
+    }
+  </script>
 </body>
-
-// Rewarded interstitial
-
-show_10919253().then(() => {
-    // You need to add your user reward function here, which will be executed after the user watches the ad.
-    // For more details, please refer to the detailed instructions.
-    alert('You have seen an ad!');
-})
-
-        
 </html>
